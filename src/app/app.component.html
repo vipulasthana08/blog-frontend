@@ -1,0 +1,72 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dark Full Page</title>
+  <style>
+    /* Make everything fill the screen */
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 100%;
+    }
+
+    /* Wrapper that covers the whole page */
+    .page-wrapper {
+      height: 100%;
+      width: 100%;
+      background-color: #121212; /* Dark background */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Button container (optional) */
+    .button-container {
+      text-align: center;
+    }
+
+    /* Simple styled button */
+    button {
+      padding: 1em 2em;
+      font-size: 1.2rem;
+      color: white;
+      background-color: #1e1e1e;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #333;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="page-wrapper">
+    <div class="button-row">
+      <button (click)="navigateToNewBlog()">Create New Blog</button>
+      <button mat-raised-button (click)="showDatepicker = !showDatepicker">Get Blog</button>
+    </div>
+  
+    <div class="container">
+    
+      <div *ngIf="showDatepicker" class="calendar-container">
+        <mat-form-field appearance="fill" class="modern-datepicker">
+          <mat-label>Select a date</mat-label>
+          <input matInput [matDatepicker]="picker" [(ngModel)]="selectedDate" (ngModelChange)="getBlogForDate()">
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+      </div>
+    
+    </div>
+    
+  </div>
+
+</body>
+</html>
+

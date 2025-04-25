@@ -1,0 +1,25 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dark Full Page</title>
+
+</head>
+<body>
+    <div class="page-wrapper">
+
+        <div class="envelope" *ngIf="blogData">
+            <div class="flap"></div>
+            <div class="letter">
+              <h2>📬 You've Got a Blog!</h2>
+              <p><strong>Title:</strong> {{ blogData.title }}</p>
+              <p><strong>Description:</strong></p>
+              <p class="description">{{ blogData.desc }}</p>
+            </div>
+          </div>
+          <button class="delete" (click)="deleteBlog()">Delete Blog</button>
+    </div>
+
+    
+</body>
+</html>

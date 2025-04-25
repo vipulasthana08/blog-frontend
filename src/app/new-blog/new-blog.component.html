@@ -1,0 +1,29 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dark Full Page</title>
+
+</head>
+<body>
+
+  <div class="page-wrapper">
+    <div class="form-container">
+      <form [formGroup]="blogForm" (ngSubmit)="submitForm()">
+        <label>
+          Title:
+          <input type="text" formControlName="title" placeholder="Enter title" />
+        </label>
+        <br /><br />
+        <label>
+          Description:
+          <textarea formControlName="description" placeholder="Enter description" rows="10"></textarea>
+        </label>
+        <br /><br />
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </div>
+
+</body>
+</html>

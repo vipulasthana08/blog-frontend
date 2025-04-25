@@ -1,0 +1,72 @@
+.page-wrapper {
+  min-height: 100vh;
+  width: 100%;
+  background-color: #a12b2b;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-container {
+  text-align: center;
+  padding: 50px;
+  background-color: #121212;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.button-row {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  background-color: #007BFF;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.calendar-container.mat-form-field {
+  margin-top: 20px;
+}
+
+input[type="date"] {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.modern-datepicker {
+  width: 100%;
+  max-width: 300px;
+  margin: 1rem auto;
+  display: block;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+
+
+.modern-datepicker {
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+}
